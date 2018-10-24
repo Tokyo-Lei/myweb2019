@@ -34,10 +34,10 @@ h1,h2,h3{font-weight: normal;}
 
 html,body{
     font-family:
-    /* 西文 */
+    /* english */
     'Gotham-Book', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu,
     "Helvetica Neue", Helvetica, Arial,
-    /* 中文 */
+    /* China */
     "PingFang SC", "Hiragino Sans GB",
     "Microsoft Yahei UI", "Microsoft Yahei", "Source Han Sans CN", sans-serif;
     background: #fff;
@@ -48,44 +48,110 @@ html,body{
 
 
 
-a {
-	color: #06f;
+
+
+
+.header {transition: top .5s;}
+.out {top: -150px;}
+.in {top:0;z-index: 9999;}
+
+header{
+	position: fixed;
+	background: #FFFFFF;
+	top: 0;
+	z-index: 999;
+	width: 100%;
 }
 
 
-p {
-	font-size: 0.8125em;
-	line-height: 1.5;
-	margin: 0 0 1.5em;
+nav{
+	 display: flex;
+	 display: -webkit-flex;
+     justify-content: center;
+	  height: 100px;
+	 align-items:flex-end;
+	 padding-bottom: 20px;
+}
+
+nav ul li{
+	display: inline-flex;
+	
+}
+nav li{
+	padding: 0 23px;
+    flex-grow: 0;
+	
+}
+
+nav li a{
+	font-family: 'Gotham-Medium';
+	color: #000;
+    font-size: 16px;
+	text-decoration:none;
+    position:relative;
+    
 }
 
 
+
+nav li a:link{
+    color:#000;
+    text-decoration:none;
+    position:relative;
+    padding:10px 0px;
+}
+nav li a:after{
+    content: "";
+    width: 0;
+    height: 2px;
+    background: #000;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transition: all .4s;
+}
+nav li a:hover:after,nav li a.active:after{
+    left: 0%;
+    width: 100%;
+}
+
+section{
+	display: block;
+	width: 100%;
+	height: auto;
+	
+}
 
 
 .container {
-	margin: 0 auto;
+	margin: 20px auto;
 	max-width: 90em;
 	padding: 1em 0;
+	display: block;
 }
+
+
+
 .container p{
-	
-	max-width: 800px;
-    margin: 0px auto;
+
+	max-width: 900px;
+	width: 100%;
     font-size: 16px;
     text-align: left;
     line-height: 2;
-    text-align: justify;
     word-wrap: break-word;
 	
 	
 }
 
-
+main{
+	margin-top: 200px;
+}
 
 
 .main{
 	width: 100%;
-    margin: 20px auto;
+    margin: 70px auto;
     text-align: center;
 }
 
@@ -95,13 +161,30 @@ p {
     line-height: 1.4;
     letter-spacing: 2px;
 }
-
-.banner p{
-	width: 100%;
-	margin:20px auto 0px auto;
+.banner span{
+	display: block;
+	margin: 20px auto;
+	width: 148px;
+    height: 1px;
+    background: #000;
+}
+.banner small{
+	position: relative;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 2px;
+    width: 150px;
+    margin: 0 auto;
 	
 }
+.banner p{
+	width: 50%;
+	margin:60px auto;
+	font-size: 16px;
+}
 
+
+/*banner pic*/
 .banner_img{
 	position: relative;
     margin: 60px auto;
@@ -111,30 +194,26 @@ p {
     overflow: hidden;
   
 }
+.banner_img img{
+    width: 100%;
+}
+
+
+
+
+
+
+
 .footer {
 	padding-top: 1.5em;
 }
-.desc {
-	color: #888;
-}
-.intro {
-	border-bottom: 1px dotted #bbb;
-	padding-bottom: 1.5em;
-}
-.social {
-	border-top: 1px dotted #bbb;
-	padding-top: 1.5em;
-}
 
-/* minor responsive adjustments */
+
 
 .footer {
 	border-top: 1px dotted #aaa;
 }
-.content {
-	border-bottom: 1px dotted #aaa;
-	margin-bottom: 1.5em;
-}
+
 
 
 
