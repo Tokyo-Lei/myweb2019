@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="./public/css/home.css">
+<link rel="stylesheet" href="./public/css/media.css">
+	
+<title></title>
+</head>
+
+<body>
+<header class="header">
+	   
+	  <nav>
+			<ul>
+			  <li><a href="#" class="active">JP / NamieAmuro</a></li>
+			  <li><a href="#">Bank</a></li>		
+			</ul>
+	  </nav>
+	    
+</header>
+
+	
+
+
+
+
+	
+	
+	<main>
+		
+		<section class="main">
+			  <div class="banner">
+				<h1>「平成歌姬」安室莱美惠。</h1>
+				<span></span>
+				<small>Naoki Ono</small>
+				<p>14歳でデビューし、25年間本当に色々な事がありました。嬉しい事や悲しい事、楽しかった事や辛かった事。
+嬉しい事、楽しかった事はファンの皆さんと共有し、悲しい時、辛かった時はファンの皆さんが私の支えとなってくれました。
+
+誰よりも頼もしく、誰よりも愛情を持って、安室奈美恵のそばに居てくださったファンの皆様に、心から感謝の気持ちでいっぱいです。
+
+本当に、本当に、ありがとうございます。
+
+引退までのこの1年アルバムやコンサート、最後にできる限りの事を精一杯し、有意義な1年にしていきたいと思ってます。
+
+そして、私らしく2018年9月16日を迎えたいと思います。
+
+「ファンの皆さんと私との思い出が、１つでも多くできますように。。。」
+
+皆様、安室奈美恵の最後の1年を、どうぞよろしくお願い致します。</p>
+				<div class="banner_img"><img src="./public/img/banner02.jpg" alt=""></div>
+			  </div>
+		</section>
+		<section class="container">
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+		</section>
+	<section class="container">
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+		</section>
+	<section class="container">
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+		</section>
+
+	</main>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script>
+   $(function(){	
+    var cubuk_seviye = $(document).scrollTop();
+    var header_yuksekligi = $('.header').outerHeight();
+
+    $(window).scroll(function() {
+        var kaydirma_cubugu = $(document).scrollTop();
+
+        if (kaydirma_cubugu > header_yuksekligi){$('.header').addClass('out');} 
+        else {$('.header').removeClass('out');}
+
+        if (kaydirma_cubugu > cubuk_seviye){$('.header').removeClass('in');} 
+        else {$('.header').addClass('in');}				
+
+        cubuk_seviye = $(document).scrollTop();	
+     });
+});
+</script>
+
+	
+</body>
+</html>
