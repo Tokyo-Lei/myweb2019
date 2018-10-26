@@ -127,7 +127,7 @@ section{
 	margin: 20px auto;
 	max-width: 90em;
 	padding: 1em 0;
-	display: block;
+
 }
 
 
@@ -140,7 +140,7 @@ section{
     text-align: left;
     line-height: 2;
     word-wrap: break-word;
-	
+	margin: 0px auto;
 	
 }
 
@@ -154,6 +154,7 @@ main{
     margin: 70px auto;
     text-align: center;
 }
+
 
 
 .banner h1{
@@ -185,7 +186,6 @@ main{
 }
 
 
-/*banner pic*/
 .banner_img{
 	position: relative;
     margin: 60px auto;
@@ -201,18 +201,30 @@ main{
 
 
 
+.mobile {
 
-
-
-
-.footer {
-	padding-top: 1.5em;
+	display: none;
 }
 
 
 
-.footer {
-	border-top: 1px dotted #aaa;
+
+
+
+
+
+
+
+
+/*页脚*/
+footer {
+	width: 100%;
+	text-align: center;
+    font-size: 14px;
+    color: #777;
+    padding: 40px 80px;
+	 -webkit-box-sizing: border-box;
+	margin: auto;
 }
 
 
