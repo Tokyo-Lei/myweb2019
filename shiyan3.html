@@ -5,8 +5,8 @@
 <title>0</title>
 <script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-2.1.1.min.js"></script>
 <script>
-	
-$(document).ready(function(){
+//	
+//$(document).ready(function(){
 //	var x = $("#y").offset().left;
 //	var x = $("#x").offset().top;
 //	var y  = $("#y").offset().top;
@@ -19,55 +19,79 @@ $(document).ready(function(){
 	
 	
 	     
-	var items=$("p");
-	var arr = [];	
-	for (var i=0; i<items.length; i++){
-			arr.push(items[i].offsetTop);
-	}; 
-	
-	//console.log(arr); [16, 548, 1080, 1612]
-	
-	
-	$(window).scroll(function(){
-		
-		
-      var scrollTop = $(document).scrollTop();
-		
-	  //console.log(scrollTop);
-		
-		
-	});
-		
-		
+//	var items=$("p");
+//	var arr = [];	
+//	for (var i=0; i<items.length; i++){
+//			arr.push(items[i].offsetTop);
+//	}; 
+//	
+//	//console.log(arr); [16, 548, 1080, 1612]
+//	
+//	
+//	$(window).scroll(function(){
+//		
+//		
+//      var scrollTop = $(document).scrollTop();
+//		
+//	  //console.log(scrollTop);
+//		
+//		
+//	});
+//		
+//		
 
 
 	
 	
+//	
+//});
 	
+	
+	$(function(){  // $(document).ready shorthand
+  $('.monster').fadeIn('slow');
+});
+
+$(document).ready(function() {
+    
+    /* Every time the window is scrolled ... */
+    $(window).scroll( function(){
+    
+        /* Check the location of each desired element */
+        $('.hideme').each( function(i){
+            
+            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window > bottom_of_object ){
+                
+                $(this).animate({'opacity':'1'},1500);
+                    
+            }
+            
+        }); 
+    
+    });
+    
 });
 	
 </script>
 </head>
 <style>
-	body{
-		margin: 0px;
-	}
-	.top1{
-		width: 300px;
-		height: 200px;
-		background:#AB3B3D;
-	}
-	p{
-		opacity: 0;
-	}
-	.add{
-	  opacity: 1;
-	}
-	.xx{
-		height: 300px
-	}
+#container {
+    height: 2000px;
+}
+#container DIV {
+    margin: 50px;
+    padding: 50px;
+    background-color: pink;
+}
+.hideme {
+    opacity: 0;
+}
 </style>
 <body>
+<!--
 	
 	<p class="top1" id="x">
 	123
@@ -87,5 +111,15 @@ $(document).ready(function(){
 	</p>
 	<div class="xx"></div>
 	
+-->
+<div id="container">
+  <div id="monster">Hello</div>
+  <div>Hello</div>
+  <div class="hideme">Fade In</div>
+  <div class="hideme">Fade In</div>
+  <div class="hideme">Fade In</div>
+  <div class="hideme">Fade In</div>
+  <div class="hideme">Fade In</div>
+</div>
 </body>
 </html>
