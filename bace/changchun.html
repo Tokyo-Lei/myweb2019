@@ -2,14 +2,12 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width">
-<meta name="description" content="">
-<meta name="keywords" content="">
-<script src="public/js/css.js"></script>	
-<script src="public/js/ipone.js"></script>		
+<link rel="stylesheet" href="./public/css/home.css">
+<link rel="stylesheet" href="./public/css/media.css">
 <title></title>
 </head>
+
 <body>
 <header class="header">
   <nav>
@@ -20,7 +18,9 @@
       <li><a href="#">CN / BeiJing</a></li>
     </ul>
   </nav>
-    <div class="mobile">
+  
+  <!--响应导航	-->
+  <div class="mobile">
     <ul>
       <li><a href="#">CN / ShangHai</a></li>
       <li><a href="#">JP / Tokyo</a></li>
@@ -43,7 +43,7 @@
 	  <small>Naoki Ono</small>
       <p>我所在的城市，土生土长的地方。目前是正在发展中的二线城市，相比沈阳和哈尔滨，<br>
         这里显着很低调不知名的城市，它的名字叫长春。</p>
-      <div class="banner_img"><img src="http://phe0gbe98.bkt.clouddn.com/banner01.jpg"></div>
+      <div class="banner_img"><img  class="lazy" src="http://phe0gbe98.bkt.clouddn.com/banner01.jpg"></div>
     </div>
   </section>
   <section class="container">
@@ -74,6 +74,70 @@
   <div>Copyright © 2018 - 2019 Naoki Ono Blog All Rights Reserved.</div>
 </footer>
 <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script> 
-<script src="public/js/home.js"></script>	
+<script>
+   $(function(){	
+	   
+	   
+    var cubuk_seviye = $(document).scrollTop();
+    var header_yuksekligi = $('.header').outerHeight();
+
+     $(window).scroll(function() {
+		 
+        var kaydirma_cubugu = $(document).scrollTop();
+        if (kaydirma_cubugu > header_yuksekligi){$('.header').addClass('out');} 
+        else {$('.header').removeClass('out');}
+
+        if (kaydirma_cubugu > cubuk_seviye){$('.header').removeClass('in');} 
+        else {$('.header').addClass('in');}				
+        cubuk_seviye = $(document).scrollTop();	
+		 
+		 
+
+		 
+        $('.container').each( function(){
+            
+            var bottom_of_object = $(this).position().top-200 + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            if( bottom_of_window > bottom_of_object ){
+                $(this).animate({'opacity':'1'},500);
+                    
+            }
+            
+        }); 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+     });
+	   
+	   
+	  $("#mobile").mouseenter(function(){
+		      $(".mobile").show("slow");
+			  $("#mobile").fadeOut();
+	      });
+		  $(".mobile").mouseleave(function(){
+			$(".mobile").slideUp("slow");
+			$("#mobile").fadeIn();
+	   });   
+	   
+	  
+	   
+	   
+	   
+	 $(".banner h1").animate({top:'0px',opacity:'1'},500);
+	 $(".banner span").animate({width:'148px',opacity:'1'},700);
+	 $(".banner small").animate({top:'0px',opacity:'1'},800);
+	 $(".banner p").animate({top:'0px',opacity:'1'},900);
+	 $(".banner_img").animate({opacity:'1'},500);  
+	 
+});
+	
+	
+	
+</script>
 </body>
 </html>

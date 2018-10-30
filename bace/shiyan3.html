@@ -47,8 +47,8 @@
 //});
 	
 	
-	$(function(){  // $(document).ready shorthand
-  $('.monster').fadeIn('slow');
+$(function(){  
+  $('#monster').fadeIn('slow');
 });
 
 $(document).ready(function() {
@@ -57,15 +57,14 @@ $(document).ready(function() {
     $(window).scroll( function(){
     
         /* Check the location of each desired element */
-        $('.hideme').each( function(i){
+        $('.hideme').each( function(){
             
             var bottom_of_object = $(this).position().top + $(this).outerHeight();
             var bottom_of_window = $(window).scrollTop() + $(window).height();
             
             /* If the object is completely visible in the window, fade it it */
             if( bottom_of_window > bottom_of_object ){
-                
-                $(this).animate({'opacity':'1'},1500);
+                $(this).animate({'opacity':'1'},500);
                     
             }
             
@@ -78,6 +77,9 @@ $(document).ready(function() {
 </script>
 </head>
 <style>
+	#monster{
+	display: none;
+	}	
 #container {
     height: 2000px;
 }
@@ -89,6 +91,18 @@ $(document).ready(function() {
 .hideme {
     opacity: 0;
 }
+	
+@keyframes topto
+{
+	from {top:0px;}
+	to {top:10px;}
+}
+
+@-webkit-keyframes topto /*Safari and Chrome*/
+{
+	from {top:0px;}
+	to {top:10px;}
+}	
 </style>
 <body>
 <!--

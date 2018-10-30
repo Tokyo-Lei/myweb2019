@@ -1,0 +1,51 @@
+/* Dead Simple Grid (c) 2015 Vladimir Agafonkin */
+
+.row .row { margin:  0 -1.5em; }
+.col      { padding: 0  1.5em; }
+
+.row:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+@media only screen { 
+	.col {
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+}
+}
+
+@media only screen and (min-width: 34em) {
+	p, ul {
+		font-size: 0.875em;
+	}
+	.feature:first-child,
+	.info:first-child {
+		border-right: 1px dotted #aaa;
+	}
+	.container {
+		padding: 1em;
+	}
+
+}
+
+@media only screen and (min-width: 54em) {
+	.content {
+		border: none;
+		border-right: 1px dotted #aaa;
+		margin-bottom: 0;
+	}
+	
+}
+
+@media only screen and (min-width: 76em) {
+
+		.banner p{
+			width: 50%;
+			margin:20px auto 0px auto;
+        }
+	
+}

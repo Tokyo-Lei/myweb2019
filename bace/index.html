@@ -5,44 +5,26 @@
 <meta name="viewport" content="width=device-width">
 <link rel="stylesheet" href="./public/css/home.css">
 <link rel="stylesheet" href="./public/css/media.css">
+	
 <title></title>
 </head>
 
 <body>
-	
 <header class="header">
 	   
 	  <nav>
 			<ul>
-			 
-			  <li><a href="#" class="active">CN / ChangChun</a></li>
-              <li><a href="#">CN / ShangHai</a></li>
+			  <li><a href="#">CN / ShangHai</a></li>
 			  <li><a href="#">JP / Tokyo</a></li>
 			  <li><a href="#">CN / BeiJing</a></li>
+			  <li><a href="#" class="active">CN / ChangChun</a></li>
 			</ul>
 	  </nav>
 	    
-	
-<!--响应导航	-->
-<div class="mobile">
-      <ul>
-    <li><a href="#">CN / ShangHai</a></li>
-    <li><a href="#">JP / Tokyo</a></li>
-    <li><a href="#">CN / BeiJing</a></li>
-    <li><a href="#" class="active">CN / ChangChun</a></li>
-  </ul>
-    </div>
-<button class="nav-mobile-button" id="mobile"> 
-	<span class="sr-only"></span> 
-	<span class="icon-bar"></span> 
-	<span class="icon-bar"></span> 
-	<span class="icon-bar"></span> 
-</button>
+</header>
 
 	
-	
-	
-</header>
+
 
 
 
@@ -51,41 +33,29 @@
 	<main>
 		
 		<section class="main">
-			  <div class="banner show" >
-				<h1>「秋的味道」人生80%的时间在这里。</h1>
+			  <div class="banner">
+				<h1>「雪之故乡」人生80%的时间在这里。</h1>
 				<span></span>
 				<small>Naoki Ono</small>
-				<p>我所在的城市，土生土长的地方。目前是正在发展中的二线城市，相比沈阳和哈尔滨，<br>这里显着很低调不知名的城市，它的名字叫长春。</p>
-				<div class="banner_img"><img  class="lazy" data-original="./public/img/banner01.jpg" width="1260" height="420"></div>
+				<p>我所在的城市，土生土长的地方。目前是一座发展中的二线城市，相比沈阳和哈尔滨，这里很低调又在努力的赶超。</p>
+				<div class="banner_img"><img src="./public/img/banner01.jpg" alt=""></div>
 			  </div>
 		</section>
-		<section class="container show">
-				<p>经过了三十六年的春秋，不知不觉已经到了中年。</p>
+		<section class="container">
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
 				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
 		</section>
-	<section class="container show">
+	<section class="container">
 				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
 				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
 		</section>
-	<section class="container show">
+	<section class="container">
 				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
 				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
 		</section>
 
 	</main>
-	
-
-	<footer>
-		<div>Copyright © 2018 - 2019 Naoki Ono Blog All Rights Reserved.</div>
-	</footer>
-	
-	
-	
-	
 	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
-	<script src="./public/js/jquery.lazyload.min.js"></script>
-	
-	
 	<script>
    $(function(){	
     var cubuk_seviye = $(document).scrollTop();
@@ -102,17 +72,6 @@
 
         cubuk_seviye = $(document).scrollTop();	
      });
-	   
-	   
-	  $("#mobile").mouseenter(function(){
-		      $(".mobile").show("slow");
-			  $("#mobile").fadeOut();
-	      });
-		  $(".mobile").mouseleave(function(){
-			$(".mobile").slideUp("slow");
-			$("#mobile").fadeIn();
-		  });   
-	  $("img.lazy").lazyload({threshold : 150,effect: "fadeIn"});
 });
 </script>
 
