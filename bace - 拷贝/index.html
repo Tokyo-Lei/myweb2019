@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="./public/css/home.css">
+<link rel="stylesheet" href="./public/css/media.css">
+	
+<title></title>
+</head>
+
+<body>
+<header class="header">
+	   
+	  <nav>
+			<ul>
+			  <li><a href="#">CN / ShangHai</a></li>
+			  <li><a href="#">JP / Tokyo</a></li>
+			  <li><a href="#">CN / BeiJing</a></li>
+			  <li><a href="#" class="active">CN / ChangChun</a></li>
+			</ul>
+	  </nav>
+	    
+</header>
+
+	
+
+
+
+
+	
+	
+	<main>
+		
+		<section class="main">
+			  <div class="banner">
+				<h1>「雪之故乡」人生80%的时间在这里。</h1>
+				<span></span>
+				<small>Naoki Ono</small>
+				<p>我所在的城市，土生土长的地方。目前是一座发展中的二线城市，相比沈阳和哈尔滨，这里很低调又在努力的赶超。</p>
+				<div class="banner_img"><img src="./public/img/banner01.jpg" alt=""></div>
+			  </div>
+		</section>
+		<section class="container">
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+		</section>
+	<section class="container">
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+		</section>
+	<section class="container">
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+		</section>
+
+	</main>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script>
+   $(function(){	
+    var cubuk_seviye = $(document).scrollTop();
+    var header_yuksekligi = $('.header').outerHeight();
+
+    $(window).scroll(function() {
+        var kaydirma_cubugu = $(document).scrollTop();
+
+        if (kaydirma_cubugu > header_yuksekligi){$('.header').addClass('out');} 
+        else {$('.header').removeClass('out');}
+
+        if (kaydirma_cubugu > cubuk_seviye){$('.header').removeClass('in');} 
+        else {$('.header').addClass('in');}				
+
+        cubuk_seviye = $(document).scrollTop();	
+     });
+});
+</script>
+
+	
+</body>
+</html>
